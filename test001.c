@@ -1,13 +1,12 @@
 #include<stdio.h>
-int g_val = 100;
-void test(){
-  g_val = g_val + 1;
-  printf("%d\n",g_val);
-}
 int main(){
+  int a = 10;
+  printf("%p\n",&a);
+  int* p = &a;
 
-  typedef unsigned int uint; 
-  test();
-  printf("%d\n",g_val); 
+  printf("%d\n",*p);
+  *p = 20;
+  printf("%d\n",*p);
+
   return 0;
 }
